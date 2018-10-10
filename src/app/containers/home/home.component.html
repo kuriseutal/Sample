@@ -1,0 +1,58 @@
+<div class="bg col">
+    <div class="text-right">
+        <label class="switch mt-3 mr-3">
+            <input type="checkbox" (input)="toggleTheme()">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class='row text-center'>
+        <div class="col">
+            <h1 class="display-1 shine chrome" style="font-weight: bold" id="title">
+                Learn With Cards
+            </h1>
+            <form>
+                <div class="row">
+                    <div class="col-md-1 offset-md-3 square" id="s1"></div>
+                    <div class="col-md-1 square" id="s2"></div>
+                    <div class="col-md-1 square" id="s3"></div>
+                    <div class="col-md-1 square" id="s4"></div>
+                    <div class="col-md-1 square" id="s5"></div>
+                    <div class="col-md-1 square" id="s6"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row mt-5" style="justify-content: center;">
+        <div class="card" id='numbers' (click)="redirect('numbers')">
+            <div class="overlay">
+                <h1 class="card-title">Numbers</h1>
+            </div>
+        </div>
+
+        <div class="card" id='letters' (click)="redirect('letters')">
+            <div class="overlay">
+                <h1 class="card-title">Letters</h1>
+            </div>
+        </div>
+
+        <div class="card" id='languages' (click)="redirect('languages')">
+            <div class="overlay">
+                <h1 class="card-title">Languages</h1>
+            </div>
+        </div>
+
+        <div class="card" id='kpop' (click)="redirect('kpop')">
+            <div class="overlay">
+                <h1 class="card-title">K-POP</h1>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; background-color: gray" class="mt-5">
+        <div class="my-auto">
+            <h6>Copyright @ 2018</h6>
+            <h6>All rights reserved</h6>
+        </div>
+    </div>
+    <br><br><br>
+</div>

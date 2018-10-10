@@ -1,0 +1,493 @@
+:root {
+  --bg-color:#fff;
+  --title-color: rgba(0, 0, 0, 0.6);
+  --title-effect-color1: #222;
+  --slider-color: white;
+  --card-bg-color: rgba(0, 0, 0, 0.7);
+  --card-title-color: white;
+}
+
+.bg {
+  background-color: var(--bg-color);
+  height: 100%;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  cursor: pointer;
+  border-color: none;
+  border: none;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+
+}
+
+.overlay {
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: var(--card-bg-color);
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+#numbers {
+  background-image: url("../../../assets/img/numbers.jpg");
+  background-repeat: no-repeat;
+  background-size: 250px 250px;
+}
+
+#letters {
+  background-image: url("../../../assets/img/letters.png");
+  background-repeat: no-repeat;
+  background-size: 250px 250px;
+}
+
+#languages {
+  background-image: url("../../../assets/img/languages.jpg");
+  background-repeat: no-repeat;
+  background-size: 250px 250px;
+}
+
+#kpop{
+  background-image: url("../../../assets/img/kpop.jpg");
+  background-repeat: no-repeat;
+  background-size: 250px 250px;
+}
+
+.card-title {
+  text-align: center;
+  top: 40%;
+  position: relative;
+  font-weight: bold;
+  color: var(--card-title-color);
+}
+
+$duration: 3s;
+$text-color: var(--title-color);
+.shine,
+.chrome {
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.shine {
+  background: var(--title-effect-color1) -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--title-effect-color1)),
+      to(var(--title-effect-color1)),
+      color-stop(0.5, #fff)
+    ) 0 0 no-repeat;
+  -webkit-background-size: 150px;
+  color: $text-color;
+  -webkit-background-clip: text;
+  -webkit-animation-name: shine;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-iteration-count: infinite;
+  text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+}
+
+.chrome {
+  background: var(--title-effect-color1) -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--title-effect-color1)),
+      to(rgb(128, 125, 125)),
+      color-stop(0.5, var(--title-effect-color1))
+    ) 0 0 no-repeat;
+  background-image: -webkit-linear-gradient(
+    -40deg,
+    transparent 0%,
+    transparent 40%,
+    var(--bg-color) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  -webkit-background-size: 200px;
+  color: $text-color;
+  -webkit-background-clip: text;
+  -webkit-animation-name: shine;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-iteration-count: infinite;
+  text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+}
+@-webkit-keyframes shine {
+  0%,
+  10% {
+    background-position: -1000px;
+  }
+  20% {
+    background-position: top left;
+  }
+  90% {
+    background-position: top right;
+  }
+  100% {
+    background-position: 1000px;
+  }
+}
+.square {
+  height: 2vw;
+}
+#s1 {
+  -webkit-animation: s1 2s infinite;
+  animation: s1 2s infinite;
+}
+#s2 {
+  -webkit-animation: s2 2s infinite;
+  animation: s2 2s infinite;
+}
+#s3 {
+  -webkit-animation: s3 2s infinite;
+  animation: s3 2s infinite;
+}
+#s4 {
+  -webkit-animation: s4 2s infinite;
+  animation: s4 2s infinite;
+}
+#s5 {
+  -webkit-animation: s5 2s infinite;
+  animation: s5 2s infinite;
+}
+#s6 {
+  -webkit-animation: s6 2s infinite;
+  animation: s6 2s infinite;
+}
+/* #region s1 */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes s1 {
+  0% {
+    background-color: red;
+  }
+  20% {
+    background-color: orangered;
+  }
+  40% {
+    background-color: yellow;
+  }
+  60% {
+    background-color: green;
+  }
+  80% {
+    background-color: blue;
+  }
+  100% {
+    background-color: purple;
+  }
+}
+/* Standard syntax */
+@keyframes s1 {
+  0% {
+    background-color: red;
+  }
+  20% {
+    background-color: orangered;
+  }
+  40% {
+    background-color: yellow;
+  }
+  60% {
+    background-color: green;
+  }
+  80% {
+    background-color: blue;
+  }
+  100% {
+    background-color: purple;
+  }
+}
+/* #endregion */
+/* #region s2 */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes s2 {
+  0% {
+    background-color: orangered;
+  }
+  20% {
+    background-color: yellow;
+  }
+  40% {
+    background-color: green;
+  }
+  60% {
+    background-color: blue;
+  }
+  80% {
+    background-color: purple;
+  }
+  100% {
+    background-color: red;
+  }
+}
+/* Standard syntax */
+@keyframes s2 {
+  0% {
+    background-color: orangered;
+  }
+  20% {
+    background-color: yellow;
+  }
+  40% {
+    background-color: green;
+  }
+  60% {
+    background-color: blue;
+  }
+  80% {
+    background-color: purple;
+  }
+  100% {
+    background-color: red;
+  }
+}
+/* #endregion */
+/* #region s3 */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes s3 {
+  0% {
+    background-color: yellow;
+  }
+  20% {
+    background-color: green;
+  }
+  40% {
+    background-color: blue;
+  }
+  60% {
+    background-color: purple;
+  }
+  80% {
+    background-color: red;
+  }
+  100% {
+    background-color: orangered;
+  }
+}
+/* Standard syntax */
+@keyframes s3 {
+  0% {
+    background-color: yellow;
+  }
+  20% {
+    background-color: green;
+  }
+  40% {
+    background-color: blue;
+  }
+  60% {
+    background-color: purple;
+  }
+  80% {
+    background-color: red;
+  }
+  100% {
+    background-color: orangered;
+  }
+}
+/* #endregion */
+/* #region s4 */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes s4 {
+  0% {
+    background-color: green;
+  }
+  20% {
+    background-color: blue;
+  }
+  40% {
+    background-color: purple;
+  }
+  60% {
+    background-color: red;
+  }
+  80% {
+    background-color: orangered;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+/* Standard syntax */
+@keyframes s4 {
+  0% {
+    background-color: green;
+  }
+  20% {
+    background-color: blue;
+  }
+  40% {
+    background-color: purple;
+  }
+  60% {
+    background-color: red;
+  }
+  80% {
+    background-color: orangered;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+/* #endregion */
+/* #region s5 */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes s5 {
+  0% {
+    background-color: blue;
+  }
+  20% {
+    background-color: purple;
+  }
+  40% {
+    background-color: red;
+  }
+  60% {
+    background-color: orangered;
+  }
+  80% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: green;
+  }
+}
+/* Standard syntax */
+@keyframes s5 {
+  0% {
+    background-color: blue;
+  }
+  20% {
+    background-color: purple;
+  }
+  40% {
+    background-color: red;
+  }
+  60% {
+    background-color: orangered;
+  }
+  80% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: green;
+  }
+}
+/* #endregion */
+/* #region s6 */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes s6 {
+  0% {
+    background-color: purple;
+  }
+  20% {
+    background-color: red;
+  }
+  40% {
+    background-color: orangered;
+  }
+  60% {
+    background-color: yellow;
+  }
+  80% {
+    background-color: green;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+/* Standard syntax */
+@keyframes s6 {
+  0% {
+    background-color: purple;
+  }
+
+  20% {
+    background-color: red;
+  }
+  40% {
+    background-color: orangered;
+  }
+  60% {
+    background-color: yellow;
+  }
+  80% {
+    background-color: green;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+/* #endregion */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+
+  width: 60px;
+  height: 34px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--slider-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #ccc;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #ccc;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
